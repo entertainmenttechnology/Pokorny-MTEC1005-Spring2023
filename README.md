@@ -10,6 +10,7 @@ ___
 
 This is the repository for all labs, notes, and resources for this course. 
 
-Please check back here regularly for updates.
 
 For more info (syllabus, notes, etc.), check out the [WIKI](https://github.com/entertainmenttechnology/Pokorny-MTEC1005-Spring2023/wiki)
+
+Please check back here regularly for code example updates.
