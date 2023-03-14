@@ -9,6 +9,9 @@ void setup()
 {
   pinMode(LEDpin, OUTPUT);    // set LED pin to output
   pinMode(buttonPin, INPUT);  // set button pin to input
+
+  Serial.begin(38400);
+  
 }
 
 void loop()                   // Loop runs forever (until power off or reset)
@@ -21,6 +24,8 @@ void loop()                   // Loop runs forever (until power off or reset)
     LEDstate = !LEDstate;                 // LED state is flipped using NOT logic (1 becomes 0, 0 becomes 1)
   }
 
+
+
   if (LEDstate == HIGH)                   // if LED state equals 1 or HIGH...
   {
     digitalWrite(LEDpin, HIGH);           // turn on LED
@@ -29,6 +34,8 @@ void loop()                   // Loop runs forever (until power off or reset)
   {
     digitalWrite(LEDpin, LOW);            // turn off LED
   }
+
+  Serial.println(LEDstate);
 
  lastButtonState = buttonState;           // store current state of toggle in lastButtonState variable
 }                                         // end of loop, repeats from top of loop

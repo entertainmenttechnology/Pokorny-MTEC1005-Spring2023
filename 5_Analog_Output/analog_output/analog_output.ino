@@ -4,9 +4,10 @@
 - value must be between 0-255 (8-bit value)
 - connect LED circuit to pin 11 on Arduino
 */
+#include <Arduino.h> 
 
 const int LED = 11;
-int delayTime = 500;
+int delayTime = 150;
 
 void setup()
 {
@@ -25,4 +26,13 @@ void loop()
   delay(delayTime);         //wait..
   analogWrite(LED, 0);      //send PWM value of 255 to LED pin
   delay(delayTime);         //wait..
+    analogWrite(LED, 64);     //send PWM value of 255 to LED pin
+  delay(delayTime);         //wait..
+    delay(delayTime);         //wait..
+  analogWrite(LED, 127);    //send PWM value of 255 to LED pin
+    analogWrite(LED, 191);    //send PWM value of 255 to LED pin
+  delay(delayTime);         //wait..
+    analogWrite(LED, 255);    //send PWM value of 255 to LED pin
+  delay(delayTime); 
 }
+
