@@ -1,7 +1,7 @@
 const int pot = A0;     //UNO PIN A0 connected to middle pin of potentiometer
 const int LED = 11;     //UNO PIN 11 connected to LED
 
-int value = 0;          //declaring variable to store potentiometer value
+int value;          //declaring variable to store potentiometer value
 
 void setup() 
 {

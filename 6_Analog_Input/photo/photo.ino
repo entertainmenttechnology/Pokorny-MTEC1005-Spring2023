@@ -1,4 +1,4 @@
-const int photo = A0;   //UNO PIN A0 connected to photocell
+const int photo = A1;   //UNO PIN A0 connected to photocell
 const int LED = 11;     //UNO PIN 11 connected to LED
 
 int value = 0;          //declaring variable to store photocell value
@@ -13,6 +13,8 @@ void loop()
 {
   value = analogRead(photo);      //read current photocell value on PIN A0
   // analogRead returns 10-bit(0-1023), but analogWrite accepts 8-bit(0-255)
+  Serial.println(value);
+  delay(100);
   value = value/4;                //divide value by four to be within 0-255 range
     /*  
     you can use map() on value instead of dividing by four...
@@ -20,9 +22,9 @@ void loop()
         map() is defined as...
       value = map(value, inputLow, inputHigh, outputLow, outputHigh);
     */
-  Serial.println(value);           //print value to serial monitor
+  //Serial.println(value);           //print value to serial monitor
 
-  if (value <= 160 && value >= 60) // if value range is between 60 to 160...
+  if (value <= 50 && value >= 10) // if value range is between 60 to 160...
   {
     digitalWrite(LED, HIGH);      // blink LED ON & OFF...
     delay(60);
