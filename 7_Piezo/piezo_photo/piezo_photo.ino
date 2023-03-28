@@ -14,4 +14,5 @@ void loop()
   Serial.println(sensor);       // print photocell value to serial monitor. 
                                 // use Serial.print to measure high/low value
   pitch = map(sensor, 280, 800, 100, 2000);   // pitch = map(sensor, photoLow, photoHigh, freqLow, freqHigh)
+  tone(piezo, pitch);
 }
