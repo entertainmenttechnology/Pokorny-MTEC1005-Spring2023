@@ -5,7 +5,6 @@ Servo myServo;            // declare an instance of Servo library named myServo
 const int servoPin = 9;   // declare variable for servo motor pin
 const int potPin = A0;    // decalre variable for potentiometer pin
 int angle = 0;            // declare variable to store angle
-int motorRate = 10;       // declare variable for speed of servo motor
 int potRead = 0;          // declare variable to store potentiometer read
 
 void setup() 
